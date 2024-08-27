@@ -8,22 +8,28 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
             color: #333;
             display: flex;
             flex-direction: column;
         }
         header {
-            background-color: #0073e6;
+            background: linear-gradient(135deg, #0073e6, #005bb5);
             color: #fff;
             padding: 20px 0;
             text-align: center;
             flex-shrink: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
         }
         nav {
             text-align: center;
@@ -34,23 +40,59 @@
             text-decoration: none;
             color: #0073e6;
             font-size: 1.2em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #005bb5;
+            transform: translateY(-2px);
         }
         main {
             flex: 1;
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        main:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         h2 {
             color: #0073e6;
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        a.download-link {
+            font-size: 1.2em;
+            color: #0073e6;
+            text-decoration: none;
+            background-color: #e0e0e0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        a.download-link:hover {
+            background-color: #0073e6;
+            color: #fff;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #0073e6;
+            background: linear-gradient(135deg, #0073e6, #005bb5);
             color: #fff;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -61,6 +103,8 @@
     </header>
 
     <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
         <a href="#download">Download</a>
     </nav>
 
@@ -83,7 +127,7 @@
         <section id="download">
             <h2>Download CLLinux</h2>
             <p>Ready to start your C programming journey? Download the latest version of CLLinux and get coding!</p>
-            <a href="cllinux.iso" style="font-size:1.2em; color:#0073e6;">Download CLLinux (coming soon)</a>
+            <a href="cllinux.iso" class="download-link">Download CLLinux (coming soon)</a>
         </section>
     </main>
 
