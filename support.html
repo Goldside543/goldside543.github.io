@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Support Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="sendSupportEmail(event)">
+        <label for="header">Header:</label>
+        <input type="text" id="header" name="header" required>
+
+        <label for="sender">Your Email:</label>
+        <input type="email" id="sender" name="sender" required>
+
+        <label for="body">Message:</label>
+        <textarea id="body" name="body" rows="6" required></textarea>
+
+        <button type="submit">Send Support Email</button>
+    </form>
+
+    <script>
+        function sendSupportEmail(event) {
+            event.preventDefault();
+            
+            // Get the form values
+            var header = document.getElementById('header').value;
+            var sender = document.getElementById('sender').value;
+            var body = document.getElementById('body').value;
+            
+            // Construct the mailto link
+            var mailtoLink = 'mailto:goldside000@outlook.com';
+            mailtoLink += '?subject=' + encodeURIComponent('[SUPPORT] ' + header);
+            mailtoLink += '&body=' + encodeURIComponent('From: ' + sender + '\n\n' + body);
+            
+            // Open the mailto link
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+</body>
+</html>
