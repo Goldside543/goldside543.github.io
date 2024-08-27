@@ -17,10 +17,18 @@
         header {
             background: linear-gradient(135deg, #0073e6, #005bb5);
             color: #fff;
-            padding: 20px 0;
+            padding: 20px;
             text-align: center;
             flex-shrink: 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 50px; /* Adjust height as needed */
+            width: auto;
         }
         header h1 {
             margin: 0;
@@ -98,6 +106,7 @@
 </head>
 <body>
     <header>
+        <img src="Drawing.png" alt="CLLinux Logo">
         <h1>Welcome to CLLinux</h1>
         <p>Your Gateway to C Programming on Linux</p>
     </header>
