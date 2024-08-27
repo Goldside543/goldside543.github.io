@@ -1,21 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>CLLinux - Your Gateway to C Programming</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #0073e6;
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            flex-shrink: 0;
         }
         header h1 {
             margin: 0;
@@ -32,6 +37,7 @@
             font-size: 1.2em;
         }
         main {
+            flex: 1;
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
@@ -46,9 +52,6 @@
             padding: 20px;
             background-color: #0073e6;
             color: #fff;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
@@ -71,7 +74,7 @@
         <section id="features">
             <h2>Features</h2>
             <ul>
-                <li>Pre-installed GCC compiler and essential hrlibc library</li>
+                <li>Pre-installed GCC compiler and essential libc library</li>
                 <li>Integrated development environments (IDEs) like Geany</li>
                 <li>Comprehensive C programming tutorials</li>
                 <li>Lightweight, fast, and beginner-friendly</li>
@@ -83,6 +86,7 @@
             <p>Ready to start your C programming journey? Download the latest version of CLLinux and get coding!</p>
             <a href="cllinux.iso" style="font-size:1.2em; color:#0073e6;">Download CLLinux (coming soon)</a>
         </section>
+    </main>
 
     <footer>
         <p>Copyright (C) 2024 Goldside543</p>
